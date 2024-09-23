@@ -41,9 +41,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-## Pasos generales en Linux/MacOS/WSL
-
-### 1. Instalar HomeBrew
+## Pasos previos en MacOS
 
 Correr el comando en la terminal y seguir las instrucciones
 
@@ -51,16 +49,21 @@ Correr el comando en la terminal y seguir las instrucciones
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+
+## Pasos generales en Linux/MacOS/WSL
+
 ### 3. Instalar Wezterm
 
 Uso wezterm como terminal. Si estoy usando WSL, Wezterm se debe instalar en windows
 
 - Windows: [Descargar e instalar](https://wezfurlong.org/wezterm/installation.html)
 
-- macOS/Linux
+- macOS
 ```
 brew install --cask wezterm
 ```
+- Linux: [Instalación](https://wezfurlong.org/wezterm/install/linux.html)
+
 
 ### 4. Instalar la Nerd Font (Meslo-LG)
 
@@ -80,24 +83,20 @@ font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo
 
 ### 5. Instalar Zsh
 
+-MacOS
 ```
 brew install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete
 ```
-
-Al instalar con brew, se instala zsh en la carpeta de brew que no es permitida como directorio de shell, para permitirlo hay que hacer
-
+-Linux
 ```
-which zsh
+sudo apt install zsh
 ```
-Y el directorio de resultado debe ser algo como home/linuxbrew/.linuxbrew/bin/zsh
-
-Luego hay que hacer sudo nano /etc/shells y añadir la ruta que se obtuvo con which zsh al final del archivo (Ctrl+O para guardar, Ctrl+X para salir).
-
-Finalmente cambiar el shell predeterminado
+Configurar zsh como shell predeterminado
 ```
 chsh -s $(which zsh)
 ```
-Reiniciar.
+
+Reiniciar o abrir y cerrar sesión. Si al abrir la terminal te solicita configurar, no es necesario hacerlo
 
 ### 5. Instalar OhMyZsh
 
@@ -106,11 +105,13 @@ NO_INTERACTIVE=true sh -c "$(curl -fsSL https://raw.githubusercontent.com/subtle
 ```
 
 ### 6. Instalar powerlevel10k
-
+-MacOS
 ```
 brew install powerlevel10k
 ```
-
-
+-Linux
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
 
 
