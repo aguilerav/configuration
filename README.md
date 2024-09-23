@@ -138,3 +138,41 @@ Se agregan como plugin en el archivo .zshrc
 ```
 plugins=(plugin1 zsh-autosuggestions zsh-syntax-highlighting)
 ```
+
+### 8. Instalar Neovim
+- Linux/WSL
+Descargar Neovim e instalar neovim (chequear [link](https://github.com/neovim/neovim/blob/master/INSTALL.md))
+```
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz
+
+tar xzvf nvim-linux64.tar.gz
+
+sudo mv nvim-linux64 /usr/local/
+
+sudo ln -s /usr/local/nvim-linux64/bin/nvim /usr/local/bin/nvim
+
+```
+Instalar requerimientos (ripgrep, node y npm)
+node y  np
+```
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.17.0`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
+
+# Repgrip
+sudo apt-get install ripgrep
+```
+-MacOS
+```
+brew install neovim
+brew install repgrip
+brew install node
+```
