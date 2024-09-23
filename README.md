@@ -152,9 +152,11 @@ sudo mv nvim-linux64 /usr/local/
 sudo ln -s /usr/local/nvim-linux64/bin/nvim /usr/local/bin/nvim
 
 ```
-Instalar requerimientos (ripgrep, node y npm)
-node y  np
+Instalar requerimientos
 ```
+# build-essential
+sudo apt install build-essential
+
 # installs nvm (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 
@@ -167,12 +169,34 @@ node -v # should print `v20.17.0`
 # verifies the right npm version is in the environment
 npm -v # should print `10.8.2`
 
-# Repgrip
+# Ripgrep
 sudo apt-get install ripgrep
+
+# Make
+sudo apt-get install make
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
 ```
--MacOS
+- MacOS
 ```
 brew install neovim
 brew install repgrip
 brew install node
 ```
+
+### 9. TMUX
+
+Instalar con `sudo apt install tmux` y luego correr
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+Ahora agregar el archivo .tmux.conf en ~/ luego hay que abrir tmux y hacer '<Ctrl>+a I' y se instalarán los plugins. Con eso esta listo tmux
+
+### 10. Configurar Neovim
+
+- Agregar la carpeta nvim en ~/.config/
+- Abrir lazy con :Lazy
+- Instalar plugins con "I"
