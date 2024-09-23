@@ -70,6 +70,11 @@ brew install --cask wezterm
 - Windows: 
 1. [Descargar fuente](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip)
 2. Extrar todo, seleccionar todos los archivos de fuentes, click derecho e instalar
+3. En WSL antes de correr el comando de linux hay que instalar unzip y fontconfig
+
+```
+sudo apt install unzip fontconfig
+```
 
 - MacOS
 ```
@@ -115,6 +120,9 @@ brew install powerlevel10k
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
+Setear `ZSH_THEME="powerlevel10k/powerlevel10k"` en `~/.zshrc`. Al reiniciar la terminal empezará la configuración de powerlevel10k.
+
+Selecciones: Lean, Unicode, 8 colors, 24-hour format, Two lines, Dotted, Left, No frame, Black, Compact, Many icons, Concise, No, Verbose, Yes
 
 ### 7. Instalar plugins de ZSH
 
