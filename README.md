@@ -68,9 +68,14 @@ brew install --cask wezterm
 1. [Descargar fuente](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip)
 2. Extrar todo, seleccionar todos los archivos de fuentes, click derecho e instalar
 
-- MacOS/Linux
+- MacOS
 ```
 brew install font-meslo-lg-nerd-font
+```
+
+-Linux
+```
+font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip'; font_name=${font_url##*/}; wget ${font_url} && unzip ${font_name} -d ~/.fonts && fc-cache -fv ;
 ```
 
 ### 5. Instalar Zsh
@@ -93,6 +98,12 @@ Finalmente cambiar el shell predeterminado
 chsh -s $(which zsh)
 ```
 Reiniciar.
+
+### 5. Instalar OhMyZsh
+
+```
+NO_INTERACTIVE=true sh -c "$(curl -fsSL https://raw.githubusercontent.com/subtlepseudonym/oh-my-zsh/feature/install-noninteractive/tools/install.sh)"
+```
 
 ### 6. Instalar powerlevel10k
 
