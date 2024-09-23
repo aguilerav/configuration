@@ -81,6 +81,8 @@ brew install font-meslo-lg-nerd-font
 font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip'; font_name=${font_url##*/}; wget ${font_url} && unzip ${font_name} -d ~/.fonts && fc-cache -fv ;
 ```
 
+Ahora se debe agregar el archivo .wezterm.lua y empezar a usar Wezterm
+
 ### 5. Instalar Zsh
 
 -MacOS
@@ -114,4 +116,17 @@ brew install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+### 7. Instalar plugins de ZSH
 
+-ZSH-AUTOSUGGESTION: Se instala con
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+-ZSH-SYNTAX-HIGHLIGHTING
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Se agregan como plugin en el archivo .zshrc
+```
+plugins=(plugin1 zsh-autosuggestions zsh-syntax-highlighting)
+```
