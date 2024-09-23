@@ -139,6 +139,13 @@ Se agregan como plugin en el archivo .zshrc
 plugins=(plugin1 zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
+### 8. Instalar Anaconda
+-Linux/WSL
+```
+curl -O https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+bash ~/Downloads/Anaconda3-2024.06-1-Linux-x86_64.sh
+```
+
 ### 8. Instalar Neovim
 - Linux/WSL
 Descargar Neovim e instalar neovim (chequear [link](https://github.com/neovim/neovim/blob/master/INSTALL.md))
@@ -177,6 +184,12 @@ sudo apt-get install make
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+#lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
 
 ```
 - MacOS
