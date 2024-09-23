@@ -146,7 +146,7 @@ curl -O https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
 bash ~/Downloads/Anaconda3-2024.06-1-Linux-x86_64.sh
 ```
 
-### 8. Instalar Neovim
+### 9. Instalar Neovim
 - Linux/WSL
 Descargar Neovim e instalar neovim (chequear [link](https://github.com/neovim/neovim/blob/master/INSTALL.md))
 ```
@@ -199,7 +199,7 @@ brew install repgrip
 brew install node
 ```
 
-### 9. TMUX
+### 10. TMUX
 
 Instalar con `sudo apt install tmux` y luego correr
 
@@ -208,8 +208,20 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 Ahora agregar el archivo .tmux.conf en ~/ luego hay que abrir tmux y hacer '<Ctrl>+a I' y se instalarán los plugins. Con eso esta listo tmux
 
-### 10. Configurar Neovim
+### 11. Configurar Neovim
 
 - Agregar la carpeta nvim en ~/.config/
 - Abrir lazy con :Lazy
 - Instalar plugins con "I"
+
+### 12. Agregar aliases
+
+En archivo .zshrc agregar
+```
+alias v='nvim'
+alias pylab='ipython --matplotlib'
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+alias tl='tmux ls'
+alias tk='tmux kill-session -t'
+```
